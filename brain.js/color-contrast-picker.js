@@ -27,6 +27,7 @@ function chooseColor(value) {
     input: color,
     output: [value]
   })
+  net.train(data) // train the network
   setRandomColor()
 }
 
