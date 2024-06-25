@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Contrast Picker</title>
+  <!-- https://youtu.be/60c4rMq-aH0?si=-BoQC3APgO7CrDzd -->
+  <!-- https://github.com/WebDevSimplified/Machine-Learning-Color-Contrast-Picker.git -->
+  <style>
+    #color {
+      width: 200px;
+      height: 200px;
+      border: 5px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .white {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div id="color">
+    <div class="white">White Text</div>
+    <div>Black Text</div>
+    <div id="guess">Guess Text</div>
+  </div>
+
+  <button id="white-button">White</button>
+  <button id="black-button">Black</button>
+  <button id="print-button">Print</button>
+
+  <script src="//unpkg.com/brain.js" defer></script>
+  <script src="color-contrast-picker.js" defer></script>
+</body>
+</html>
