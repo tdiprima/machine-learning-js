@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colors</title>
+  <script src="//unpkg.com/brain.js"></script>
+</head>
+<body>
+  <div id="diagram"></div>
+  <script>
+    const net = new brain.NeuralNetwork()
+
+    // Train the network with some data
+    const data = [
+      {
+        input: { r: 0, g: 0, b: 0 },
+        output: [1]
+      },
+      {
+        input: { r: 1, g: 1, b: 1 },
+        output: [0]
+      }
+    ]
+
+    net.train(data)
+
+    const diagram = document.getElementById('diagram')
+    diagram.innerHTML = brain.utilities.toSVG(net)
+
+    // Test the network
+    console.log(net.run({ r: 0, g: 0, b: 0 })) // 1
+    console.log(net.run({ r: 1, g: 1, b: 1 })) // 0
+
+    console.log(net.run({ r: 1, g: 1, b: 0 })) // 0
+    console.log(net.run({ r: 1, g: .5, b: 0 })) // 0
+  </script>
+</body>
+</html>
