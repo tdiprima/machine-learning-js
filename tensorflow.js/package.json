@@ -2,6 +2,9 @@
   "name": "tensorflow",
   "version": "1.0.0",
   "devDependencies": {
-    "@tensorflow/tfjs-node": "^4.2.0"
+    "@tensorflow/tfjs-node": "^4.22.0"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.22.0"
   }
 }
