@@ -7,3 +7,15 @@ Machine learning with JavaScript
 [Get started with TensorFlow.js](https://www.tensorflow.org/js/tutorials)
 
 [TensorFlow.js Tutorial](https://www.w3schools.com/ai/ai_tensorflow_intro.asp)
+
+To speed things up dramatically, install their node backend. Visit https://github.com/tensorflow/tfjs-node for more details:
+
+Hey! To boost your TensorFlow.js performance in Node.js, you should switch from the browser-optimized `@tensorflow/tfjs` package to the Node.js-specific `@tensorflow/tfjs-node`. This change leverages native TensorFlow binaries, offering significant speed improvements...
+
+If you have an NVIDIA GPU and want to take advantage of GPU acceleration, you can install the GPU version of the package:
+
+```bash
+npm install @tensorflow/tfjs-node-gpu
+```
+
+Ensure that you have CUDA installed on your machine before using the GPU package.
